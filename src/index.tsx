@@ -116,6 +116,7 @@ export default function useDrivePicker(): [
     customViews,
     locale = 'en',
     setIncludeFolders,
+    setEnableDrives,
     setSelectFolderEnabled,
     disableDefaultView = false,
     callbackFunction,
@@ -126,12 +127,14 @@ export default function useDrivePicker(): [
     if (viewMimeTypes) view.setMimeTypes(viewMimeTypes)
     if (setIncludeFolders) view.setIncludeFolders(true)
     if (setSelectFolderEnabled) view.setSelectFolderEnabled(true)
+    if (setEnableDrives) view.setEnableDrives(setEnableDrives)
 
     const uploadView = new google.picker.DocsUploadView()
     if (viewMimeTypes) uploadView.setMimeTypes(viewMimeTypes)
     if (showUploadFolders) uploadView.setIncludeFolders(true)
     if (setParentFolder) uploadView.setParent(setParentFolder)
     if (setParentFolder) view.setParent(setParentFolder)
+    if (setEnableDrives) uploadView.setEnableDrives(setEnableDrives)
 
     picker = new google.picker.PickerBuilder()
       .setAppId(appId)
