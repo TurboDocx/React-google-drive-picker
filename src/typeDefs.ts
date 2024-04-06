@@ -59,6 +59,7 @@ export type PickerConfiguration = {
   disabled?: boolean
   appId?: string
   supportDrives?: boolean
+  setEnableDrives?: boolean
   showUploadView?: boolean
   showUploadFolders?: boolean
   setParentFolder?: string
