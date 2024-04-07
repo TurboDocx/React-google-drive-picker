@@ -123,7 +123,12 @@ export default function useDrivePicker(): [
   }: PickerConfiguration) => {
     if (disabled) return false
 
+    // The options can be found at https://developers.google.com/drive/picker/reference#docs-upload-view
+
     const view = new google.picker.DocsView(google.picker.ViewId[viewId])
+
+    // default to showing your own files
+    view.setOwnedByMe(true)
     if (viewMimeTypes) view.setMimeTypes(viewMimeTypes)
     if (setIncludeFolders) view.setIncludeFolders(true)
     if (setSelectFolderEnabled) view.setSelectFolderEnabled(true)
@@ -134,7 +139,6 @@ export default function useDrivePicker(): [
     if (showUploadFolders) uploadView.setIncludeFolders(true)
     if (setParentFolder) uploadView.setParent(setParentFolder)
     if (setParentFolder) view.setParent(setParentFolder)
-    if (setEnableDrives) uploadView.setEnableDrives(setEnableDrives)
 
     picker = new google.picker.PickerBuilder()
       .setAppId(appId)
