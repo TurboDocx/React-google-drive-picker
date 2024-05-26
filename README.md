@@ -1,10 +1,10 @@
-# React-google-drive-picker
+# React-google-drive-picker (Hard Fork by TurboDocx)
 
-Google drive picker
+Google Drive Picker custom hook, maintained by TurboDocx.
 
 ## Description
 
-Google drive picker custom hook.
+Google Drive picker custom hook.
 
 ## Getting Started
 
@@ -38,6 +38,7 @@ function App() {
       showUploadView: true,
       showUploadFolders: true,
       supportDrives: true,
+      setEnableDrives: false, // this adds support for Shared Drives on Premium Google Workspace plans. 
       multiselect: true,
       // customViews: customViewsArray, // custom view
       callbackFunction: (data) => {
@@ -86,6 +87,7 @@ export default App;
 | customViews      |ViewClass[]|    optional     |  Array of custom views you want to add to the picker|
 | customScopes      |string[]|    ['https://www.googleapis.com/auth/drive.readonly']     |  Array of custom scopes you want to add to the picker|
 | locale           |string    |    en            | List of supported locales https://developers.google.com/picker/docs#i18n|
+| setEnableDrives  |boolean   |    false         | Enables the selection of Shared Drives (Requires Premium Google Workspace plans) |
 
 
   ## viewId options
@@ -104,10 +106,13 @@ export default App;
 
 ## Author
 
-[@Jose medina](https://www.linkedin.com/in/jos%C3%A9-medina-56479a128/)
-
+Originally Created by [@Jose medina](https://www.linkedin.com/in/jos%C3%A9-medina-56479a128/)
+Maintained by the [TurboDocx Team](https://turbodocx.com).
 
 ## Acknowledgments
 Inspiration, code snippets
 * [sdoomz](https://github.com/sdoomz/react-google-picker)
 * [obonyojimmy](https://github.com/obonyojimmy/react-drive-picker#readme)
+
+**Proudly Sponsored by TurboDocx** 
+[!["Proudly Sponsored by TurboDocx"](https://image.typedream.com/cdn-cgi/image/width=1920,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/de39171b-a5c9-49c5-bd9c-c2dfd5d632a2/2PZxyx12UwC5HrIA3p6lo16fCms_Group_16_1_.png)](https://www.TurboDocx.com)
