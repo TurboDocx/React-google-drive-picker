@@ -1,6 +1,6 @@
 {
   "name": "react-google-drive-picker",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "React google drive picker api",
   "types": "./dist",
   "main": "./dist/index.js",
@@ -11,13 +11,17 @@
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --fix",
     "format": "prettier --write ./src/*"
   },
-  "author": "Jose-cd",
+  "author": "TurboDocx",
+  "contributors": [
+    "Jose-cd",
+    "nicolasiscoding"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jose-cd/React-google-drive-picker.git"
+    "url": "https://github.com/TurboDocx/React-google-drive-picker.git"
   },
   "bugs": {
-    "url": "https://github.com/Jose-cd/React-google-drive-picker/issues"
+    "url": "https://github.com/TurboDocx/React-google-drive-picker/issues"
   },
   "license": "MIT",
   "keywords": [
