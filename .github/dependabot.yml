@@ -1,0 +1,44 @@
+version: 2
+
+updates:
+  # NPM dependencies (root) - security updates only
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "master"
+    commit-message:
+      prefix: "security"
+      include: "scope"
+    open-pull-requests-limit: 0
+    allow:
+      - dependency-type: "all"
+    rebase-strategy: "auto"
+
+  # NPM dependencies (demo) - security updates only
+  - package-ecosystem: "npm"
+    directory: "/demo"
+    schedule:
+      interval: "daily"
+    target-branch: "master"
+    commit-message:
+      prefix: "security"
+      include: "scope"
+    open-pull-requests-limit: 0
+    allow:
+      - dependency-type: "all"
+    rebase-strategy: "auto"
+
+  # GitHub Actions dependencies - security updates only
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "master"
+    commit-message:
+      prefix: "security"
+      include: "scope"
+    open-pull-requests-limit: 0
+    allow:
+      - dependency-type: "all"
+    rebase-strategy: "auto"
