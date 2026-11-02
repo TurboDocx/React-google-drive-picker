@@ -60,7 +60,7 @@
     "unicorn/no-useless-undefined": "off", // contradicts consistent-return: only `return null` would satisfy both
 
     // Conventions of this codebase.
-    "unicorn/filename-case": "off", // hooks and modules are camelCase (useInjectScript.tsx, typeDefs.ts)
+    "unicorn/filename-case": "off", // camelCase modules (useInjectScript.tsx), PascalCase components (App.tsx), CRA's react-app-env.d.ts
 
     // Ban language features the code relies on, or restate what TypeScript already checks.
     "oxc/no-async-await": "off",
