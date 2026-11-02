@@ -1,5 +1,6 @@
 {
-  // tsrs (TS 7) only, used by `npm run typecheck`. tsconfig.json still drives the published ES5 emit on TS 4.x;
+  // tsrs (TS 7) only, used by `npm run typecheck`.
+  // Dev boxes and PR CI use tsrs; staging/production builds, deploys and publishes still use regular tsc with tsconfig.json. tsconfig.json still drives the published ES5 emit on TS 4.x;
   // TS 7 removed the ES5 target and moduleResolution "node", so this check runs one target up.
   "extends": "./tsconfig.json",
   "compilerOptions": { "target": "ES2015", "moduleResolution": "bundler", "noEmit": true }
