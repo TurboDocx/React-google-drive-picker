@@ -24,8 +24,15 @@
   "rules": {
     // ESLint parity: plugin:react/recommended and plugin:@typescript-eslint/recommended.
     "react/jsx-filename-extension": ["error", { "extensions": [".tsx", ".ts"] }],
-    // Without options Oxlint (like ESLint 9) exempts _-prefixed names; typescript-eslint 4 did not.
-    "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
+    // typescript-eslint 4's defaults: no exemption for _-prefixed names (Oxlint's default without
+    // options, like ESLint 9) and none for unused catch parameters either way.
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "caughtErrors": "none" }],
+    // ESLint 8 flagged `while (true)`; Oxlint's default skips it.
+    "no-constant-condition": ["error", { "checkLoops": "all" }],
+    // `import type` beside a value import from the same module is what consistent-type-imports asks for.
+    "no-duplicate-imports": ["error", { "allowSeparateTypeImports": true }],
+    // `void promise()` marks a deliberate fire-and-forget, the form no-floating-promises asks for.
+    "no-void": ["error", { "allowAsStatement": true }],
     "react/require-render-return": "error", // nursery in Oxlint
     "eslint-js/no-extra-semi": "error", // @typescript-eslint/no-extra-semi
     "react-js/no-deprecated": "error", // react/no-deprecated
@@ -50,6 +57,10 @@
     "curly": "off", // Prettier owns this layout
     "unicorn/number-literal-case": "off", // Prettier owns this
     "react/exhaustive-effect-dependencies": "off", // duplicate of react/exhaustive-deps
+    "unicorn/no-useless-undefined": "off", // contradicts consistent-return: only `return null` would satisfy both
+
+    // Conventions of this codebase.
+    "unicorn/filename-case": "off", // hooks and modules are camelCase (useInjectScript.tsx, typeDefs.ts)
 
     // Ban language features the code relies on, or restate what TypeScript already checks.
     "oxc/no-async-await": "off",
@@ -85,5 +96,12 @@
     "react/jsx-no-literals": "off", // there is no i18n layer
     "react/jsx-max-depth": "off",
     "react/todo": "off" // reports React Compiler limitations, not defects in the code
-  }
+  },
+  "overrides": [
+    {
+      // The demo's Jest tests (Create React App), where Jest injects its globals.
+      "files": ["demo/src/**/*.test.*", "demo/src/setupTests.ts"],
+      "env": { "jest": true }
+    }
+  ]
 }

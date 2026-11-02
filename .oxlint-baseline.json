@@ -10,6 +10,24 @@
     },
     {
       "files": [
+        "demo/src/index.tsx",
+        "demo/src/setupTests.ts"
+      ],
+      "rules": {
+        "import/no-unassigned-import": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/react-app-env.d.ts"
+      ],
+      "rules": {
+        "import/unambiguous": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/App.tsx",
         "src/useInjectScript.tsx"
       ],
       "rules": {
@@ -42,10 +60,50 @@
     },
     {
       "files": [
+        "demo/src/reportWebVitals.ts"
+      ],
+      "rules": {
+        "promise/always-return": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/reportWebVitals.ts"
+      ],
+      "rules": {
+        "promise/catch-or-return": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/reportWebVitals.ts"
+      ],
+      "rules": {
+        "promise/prefer-await-to-then": "off"
+      }
+    },
+    {
+      "files": [
         "src/index.tsx"
       ],
       "rules": {
         "react-hooks/exhaustive-deps": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/App.tsx"
+      ],
+      "rules": {
+        "react-perf/jsx-no-new-function-as-prop": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/App.tsx"
+      ],
+      "rules": {
+        "react/button-has-type": "off"
       }
     },
     {
@@ -66,6 +124,14 @@
     },
     {
       "files": [
+        "demo/src/App.tsx"
+      ],
+      "rules": {
+        "react/react-in-jsx-scope": "off"
+      }
+    },
+    {
+      "files": [
         "src/index.tsx",
         "src/useInjectScript.tsx"
       ],
@@ -75,10 +141,20 @@
     },
     {
       "files": [
+        "demo/src/App.test.tsx",
+        "demo/src/index.tsx",
         "src/index.tsx"
       ],
       "rules": {
         "sort-imports": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/react-app-env.d.ts"
+      ],
+      "rules": {
+        "typescript/consistent-indexed-object-style": "off"
       }
     },
     {
@@ -92,6 +168,7 @@
     },
     {
       "files": [
+        "demo/src/reportWebVitals.ts",
         "src/index.tsx"
       ],
       "rules": {
@@ -100,11 +177,22 @@
     },
     {
       "files": [
+        "demo/src/App.tsx",
+        "demo/src/reportWebVitals.ts",
         "src/index.tsx",
         "src/useInjectScript.tsx"
       ],
       "rules": {
         "typescript/explicit-function-return-type": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/App.tsx",
+        "demo/src/reportWebVitals.ts"
+      ],
+      "rules": {
+        "typescript/explicit-module-boundary-types": "off"
       }
     },
     {
@@ -125,11 +213,10 @@
     },
     {
       "files": [
-        "src/typeDefs.ts",
-        "src/useInjectScript.tsx"
+        "demo/src/App.tsx"
       ],
       "rules": {
-        "unicorn/filename-case": "off"
+        "typescript/no-non-null-assertion": "off"
       }
     },
     {
@@ -138,6 +225,14 @@
       ],
       "rules": {
         "unicorn/no-array-for-each": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/reportWebVitals.ts"
+      ],
+      "rules": {
+        "unicorn/no-instanceof-builtins": "off"
       }
     },
     {
@@ -154,6 +249,14 @@
       ],
       "rules": {
         "unicorn/no-negated-condition": "off"
+      }
+    },
+    {
+      "files": [
+        "demo/src/index.tsx"
+      ],
+      "rules": {
+        "unicorn/prefer-query-selector": "off"
       }
     }
   ]
