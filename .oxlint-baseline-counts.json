@@ -1,0 +1,106 @@
+{
+  "import/first": {
+    "src/index.tsx": 3
+  },
+  "import/no-unassigned-import": {
+    "demo/src/index.tsx": 1,
+    "demo/src/setupTests.ts": 1
+  },
+  "import/unambiguous": {
+    "demo/src/react-app-env.d.ts": 1
+  },
+  "no-console": {
+    "demo/src/App.tsx": 4,
+    "src/useInjectScript.tsx": 1
+  },
+  "no-shadow": {
+    "src/index.tsx": 2
+  },
+  "no-unused-vars": {
+    "src/index.tsx": 2
+  },
+  "no-use-before-define": {
+    "src/index.tsx": 5
+  },
+  "promise/always-return": {
+    "demo/src/reportWebVitals.ts": 1
+  },
+  "promise/catch-or-return": {
+    "demo/src/reportWebVitals.ts": 1
+  },
+  "promise/prefer-await-to-then": {
+    "demo/src/reportWebVitals.ts": 1
+  },
+  "react-hooks/exhaustive-deps": {
+    "src/index.tsx": 1
+  },
+  "react-perf/jsx-no-new-function-as-prop": {
+    "demo/src/App.tsx": 2
+  },
+  "react/button-has-type": {
+    "demo/src/App.tsx": 2
+  },
+  "react/hook-use-state": {
+    "src/index.tsx": 1
+  },
+  "react/immutability": {
+    "src/index.tsx": 2
+  },
+  "react/react-in-jsx-scope": {
+    "demo/src/App.tsx": 3
+  },
+  "react/set-state-in-effect": {
+    "src/index.tsx": 1,
+    "src/useInjectScript.tsx": 1
+  },
+  "sort-imports": {
+    "demo/src/App.test.tsx": 1,
+    "demo/src/index.tsx": 1,
+    "src/index.tsx": 2
+  },
+  "typescript/consistent-indexed-object-style": {
+    "demo/src/react-app-env.d.ts": 3
+  },
+  "typescript/consistent-type-definitions": {
+    "src/typeDefs.ts": 4,
+    "src/useInjectScript.tsx": 1
+  },
+  "typescript/consistent-type-imports": {
+    "demo/src/reportWebVitals.ts": 1,
+    "src/index.tsx": 1
+  },
+  "typescript/explicit-function-return-type": {
+    "demo/src/App.tsx": 3,
+    "demo/src/reportWebVitals.ts": 1,
+    "src/index.tsx": 4,
+    "src/useInjectScript.tsx": 3
+  },
+  "typescript/explicit-module-boundary-types": {
+    "demo/src/App.tsx": 1,
+    "demo/src/reportWebVitals.ts": 1
+  },
+  "typescript/no-dynamic-delete": {
+    "src/useInjectScript.tsx": 1
+  },
+  "typescript/no-explicit-any": {
+    "src/typeDefs.ts": 1
+  },
+  "typescript/no-non-null-assertion": {
+    "demo/src/App.tsx": 4
+  },
+  "unicorn/no-array-for-each": {
+    "src/useInjectScript.tsx": 1
+  },
+  "unicorn/no-instanceof-builtins": {
+    "demo/src/reportWebVitals.ts": 1
+  },
+  "unicorn/no-invalid-remove-event-listener": {
+    "src/useInjectScript.tsx": 2
+  },
+  "unicorn/no-negated-condition": {
+    "src/useInjectScript.tsx": 1
+  },
+  "unicorn/prefer-query-selector": {
+    "demo/src/index.tsx": 1
+  }
+}
