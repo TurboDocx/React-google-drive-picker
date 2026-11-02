@@ -1,14 +1,9 @@
 /**
  * @fileoverview Helper class to aid in constructing fix commands.
  * @author Alan Pierce
+ * Vendored from ESLint (MIT, see LICENSE) without retainEnclosingFunction, which no vendored rule uses.
  */
 "use strict";
-
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
-const astUtils = require("./ast-utils.cjs");
 
 //------------------------------------------------------------------------------
 // Public Interface
@@ -41,20 +36,6 @@ class FixTracker {
     retainRange(range) {
         this.retainedRange = range;
         return this;
-    }
-
-    /**
-     * Given a node, find the function containing it (or the entire program) and
-     * mark it as retained, meaning that other fixes may not modify it in this
-     * pass. This is useful for avoiding conflicts in fixes that modify control
-     * flow.
-     * @param {ASTNode} node The node to use as a starting point.
-     * @returns {FixTracker} The same RuleFixer, for chained calls.
-     */
-    retainEnclosingFunction(node) {
-        const functionNode = astUtils.getUpperFunction(node);
-
-        return this.retainRange(functionNode ? functionNode.range : this.sourceCode.ast.range);
     }
 
     /**
