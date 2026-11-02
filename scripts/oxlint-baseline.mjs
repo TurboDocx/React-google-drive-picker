@@ -172,10 +172,12 @@ const findFixed = ({ current, committed }) =>
       }))
   )
 
-// Files added, changed, renamed or deleted since `ref`, untracked files included.
+// Files added, changed, renamed or deleted since `ref`, untracked files included. A renamed file lists
+// both paths (--no-renames), so its old path's lower count must be locked in before merge, moving the
+// counts to the new path; otherwise the branch it merges into would see the new path as growth.
 const changedFilesSince = ({ ref }) => {
   const tracked = git({
-    gitArgs: ['diff', '--name-only', '--no-color', ref],
+    gitArgs: ['diff', '--name-only', '--no-renames', '--no-color', ref],
   }).stdout
   const untracked = git({
     gitArgs: ['ls-files', '--others', '--exclude-standard'],
