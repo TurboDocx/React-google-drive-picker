@@ -5,7 +5,8 @@
   "types": "./dist",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run typecheck && tsc",
+    "typecheck": "tsrs --noEmit -p tsconfig.typecheck.json --checkers 4",
     "watch": "tsc -w",
     "dev": "nodemon ./dist/index.js",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --fix",
@@ -43,6 +44,7 @@
     "nodemon": "^2.0.7",
     "prettier": "2.3.2",
     "prettier-eslint": "^12.0.0",
+    "tsrs": "0.18.0-ts7.1.0-dev.20260929",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
