@@ -24,6 +24,8 @@
   "rules": {
     // ESLint parity: plugin:react/recommended and plugin:@typescript-eslint/recommended.
     "react/jsx-filename-extension": ["error", { "extensions": [".tsx", ".ts"] }],
+    // Without options Oxlint (like ESLint 9) exempts _-prefixed names; typescript-eslint 4 did not.
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
     "react/require-render-return": "error", // nursery in Oxlint
     "eslint-js/no-extra-semi": "error", // @typescript-eslint/no-extra-semi
     "react-js/no-deprecated": "error", // react/no-deprecated
