@@ -3,5 +3,9 @@ src
 .env
 .vscode
 .tsconfig.json
-.eslintrc.json
+.oxlintrc.json
+.oxlint-baseline.json
+.oxlint-baseline-counts.json
+oxlint-plugins
+scripts
 .prettierrc.json

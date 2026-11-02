@@ -1,0 +1,63 @@
+{
+  "import/first": {
+    "src/index.tsx": 3
+  },
+  "no-console": {
+    "src/useInjectScript.tsx": 1
+  },
+  "no-shadow": {
+    "src/index.tsx": 2
+  },
+  "no-unused-vars": {
+    "src/index.tsx": 2
+  },
+  "no-use-before-define": {
+    "src/index.tsx": 5
+  },
+  "react-hooks/exhaustive-deps": {
+    "src/index.tsx": 1
+  },
+  "react/hook-use-state": {
+    "src/index.tsx": 1
+  },
+  "react/immutability": {
+    "src/index.tsx": 2
+  },
+  "react/set-state-in-effect": {
+    "src/index.tsx": 1,
+    "src/useInjectScript.tsx": 1
+  },
+  "sort-imports": {
+    "src/index.tsx": 2
+  },
+  "typescript/consistent-type-definitions": {
+    "src/typeDefs.ts": 4,
+    "src/useInjectScript.tsx": 1
+  },
+  "typescript/consistent-type-imports": {
+    "src/index.tsx": 1
+  },
+  "typescript/explicit-function-return-type": {
+    "src/index.tsx": 4,
+    "src/useInjectScript.tsx": 3
+  },
+  "typescript/no-dynamic-delete": {
+    "src/useInjectScript.tsx": 1
+  },
+  "typescript/no-explicit-any": {
+    "src/typeDefs.ts": 1
+  },
+  "unicorn/filename-case": {
+    "src/typeDefs.ts": 1,
+    "src/useInjectScript.tsx": 1
+  },
+  "unicorn/no-array-for-each": {
+    "src/useInjectScript.tsx": 1
+  },
+  "unicorn/no-invalid-remove-event-listener": {
+    "src/useInjectScript.tsx": 2
+  },
+  "unicorn/no-negated-condition": {
+    "src/useInjectScript.tsx": 1
+  }
+}

@@ -1,3 +1,5 @@
 node_modules
 .env
 dist
+# Temporary config written by scripts/oxlint-baseline.mjs
+.oxlintrc.unbaselined.json
