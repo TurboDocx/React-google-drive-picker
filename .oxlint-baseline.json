@@ -1,0 +1,160 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "import/first": "off"
+      }
+    },
+    {
+      "files": [
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "no-shadow": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "no-unused-vars": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "no-use-before-define": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "react-hooks/exhaustive-deps": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "react/hook-use-state": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "react/immutability": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx",
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "react/set-state-in-effect": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "sort-imports": "off"
+      }
+    },
+    {
+      "files": [
+        "src/typeDefs.ts",
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "typescript/consistent-type-definitions": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx"
+      ],
+      "rules": {
+        "typescript/consistent-type-imports": "off"
+      }
+    },
+    {
+      "files": [
+        "src/index.tsx",
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "typescript/explicit-function-return-type": "off"
+      }
+    },
+    {
+      "files": [
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "typescript/no-dynamic-delete": "off"
+      }
+    },
+    {
+      "files": [
+        "src/typeDefs.ts"
+      ],
+      "rules": {
+        "typescript/no-explicit-any": "off"
+      }
+    },
+    {
+      "files": [
+        "src/typeDefs.ts",
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "unicorn/filename-case": "off"
+      }
+    },
+    {
+      "files": [
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "unicorn/no-array-for-each": "off"
+      }
+    },
+    {
+      "files": [
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "unicorn/no-invalid-remove-event-listener": "off"
+      }
+    },
+    {
+      "files": [
+        "src/useInjectScript.tsx"
+      ],
+      "rules": {
+        "unicorn/no-negated-condition": "off"
+      }
+    }
+  ]
+}

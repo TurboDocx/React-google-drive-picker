@@ -1,0 +1,87 @@
+{
+  // Everything is on by default: every category below is an error, for every file, for new code.
+  // A rule is off here only for a stated reason. Existing violations live in .oxlint-baseline.json,
+  // a per-file allowlist that only ever shrinks (see scripts/oxlint-baseline.mjs).
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["./.oxlint-baseline.json"],
+  "plugins": ["typescript", "unicorn", "oxc", "import", "promise", "jsdoc", "react", "react-perf", "jsx-a11y"],
+  // ESLint and eslint-plugin-react rules Oxlint has no version of, vendored (MIT) so they keep running
+  // without ESLint installed.
+  "jsPlugins": [
+    "./oxlint-plugins/eslint-js/index.cjs",
+    "./oxlint-plugins/react-js/index.cjs",
+    "./oxlint-plugins/no-unused-react-import.cjs"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "error",
+    "pedantic": "error",
+    "style": "error",
+    "restriction": "error"
+  },
+  "env": { "browser": true, "es2021": true },
+  "rules": {
+    // ESLint parity: plugin:react/recommended and plugin:@typescript-eslint/recommended.
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx", ".ts"] }],
+    "react/require-render-return": "error", // nursery in Oxlint
+    "eslint-js/no-extra-semi": "error", // @typescript-eslint/no-extra-semi
+    "react-js/no-deprecated": "error", // react/no-deprecated
+    "turbodocx/no-unused-react-import": "error", // what no-unused-vars with react/jsx-uses-react reported
+
+    // Size limits at a level a real module can meet; the defaults flag nearly every function.
+    "max-lines": ["error", { "max": 1000, "skipBlankLines": true, "skipComments": true }],
+    "max-lines-per-function": ["error", { "max": 300, "skipBlankLines": true, "skipComments": true }],
+    "max-statements": ["error", { "max": 100 }],
+    "complexity": ["error", { "max": 30 }],
+    "max-depth": ["error", { "max": 5 }],
+    "import/max-dependencies": ["error", { "max": 40 }],
+
+    // Mutually exclusive, or a duplicate of a rule that stays on.
+    "import/no-default-export": "off", // contradicts import/prefer-default-export and import/no-named-export
+    "import/no-named-export": "off",
+    "import/prefer-default-export": "off",
+    "no-ternary": "off", // contradicts unicorn/prefer-ternary
+    "no-negated-condition": "off", // duplicate of unicorn/no-negated-condition
+    "unicorn/no-nested-ternary": "off", // duplicate of no-nested-ternary, and fights Prettier's parens
+    "typescript/non-nullable-type-assertion-style": "off", // asks for the ! that no-non-null-assertion bans
+    "curly": "off", // Prettier owns this layout
+    "unicorn/number-literal-case": "off", // Prettier owns this
+    "react/exhaustive-effect-dependencies": "off", // duplicate of react/exhaustive-deps
+
+    // Ban language features the code relies on, or restate what TypeScript already checks.
+    "oxc/no-async-await": "off",
+    "oxc/no-optional-chaining": "off",
+    "oxc/no-rest-spread-properties": "off",
+    "no-undefined": "off",
+    "unicorn/no-null": "off", // React's own APIs use null: useRef(null), a component that renders nothing
+    "jsdoc/require-param": "off", // TypeScript owns parameter documentation
+    "jsdoc/require-param-type": "off",
+    "jsdoc/require-param-description": "off",
+    "jsdoc/require-returns": "off",
+    "jsdoc/require-returns-type": "off",
+    "jsdoc/require-returns-description": "off",
+    "jsdoc/require-throws-type": "off",
+
+    // Opinion with no defect signal.
+    "func-style": "off",
+    "import/group-exports": "off",
+    "import/exports-last": "off",
+    "one-var": "off",
+    "sort-keys": "off",
+    "sort-vars": "off",
+    "no-magic-numbers": "off",
+    "capitalized-comments": "off",
+    "id-length": "off",
+    "no-inline-comments": "off",
+    "init-declarations": "off",
+    "require-unicode-regexp": "off",
+    "prefer-named-capture-group": "off",
+    "no-warning-comments": "off", // TODO comments are allowed
+    "unicorn/numeric-separators-style": "off",
+    "typescript/prefer-readonly-parameter-types": "off",
+    "react/jsx-no-literals": "off", // there is no i18n layer
+    "react/jsx-max-depth": "off",
+    "react/todo": "off" // reports React Compiler limitations, not defects in the code
+  }
+}
